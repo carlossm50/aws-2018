@@ -21,10 +21,9 @@
                     </tr>
                 </thead>
                 <tr>
-                    <td><input class="form-control" ng-model="newContact.name"></td>
+                    <td><input class="form-control"  neme="name"  ng-model="newContact.name"></td>
                     <td><input ng-class="{'is-invalid': !contactForm.phone.$valid}" name="phone" class="form-control" required ng-pattern="/^[0-9]+$/" ng-model="newContact.phone"></td>
                     <td><input class="form-control" ng-model="newContact.email" data-form-field="Email"></td> 
-                    
                     <td><button class="btn btn-primary" ng-disabled="!contactForm.$valid"  ng-click="addContact()">Add</button> </td> 
                     <td><button class="btn btn-danger" ng-click="delContact()">Delete</button> </td> 
                     <td><button class="btn btn-warning" ng-click="updateContact(contact.name)">Update</button> </td>
